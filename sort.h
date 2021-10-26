@@ -26,6 +26,5 @@ int partition(int *array, int lowIndex, int highIndex, size_t size);
 
 void print_array(int *array, size_t size);
 void print_list(const listint_t *list);
-void swap(int *a, int *b);
 
 #endif

@@ -6,9 +6,9 @@
 */
 void selection_sort(int *array, size_t size)
 {
-	int i, j, smallest;
+	int i, j, smallest, temp;
 
-	if (size < 2)
+	if (size < 2 || array == NULL)
 		return;
 	for (i = 0; i < size - 1; i++)
 	{
@@ -16,19 +16,12 @@ void selection_sort(int *array, size_t size)
 		for (j = i + 1; j < size; j++)
 			if (array[j] < array[smallest])
 				smallest = j;
-		swap(&array[smallest], &array[i]);
+		if (smallest != i)
+		{
+		temp = array[smallest];
+		array[smallest] = array[i];
+		array[i] = temp;
 		print_array(array, size);
+		}
 	}
-}
-/**
- * swap - function to swap two elements in an array
- * @a: first variable
- * @b: second variable
- * Return: none
-*/
-void swap(int *a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
 }
