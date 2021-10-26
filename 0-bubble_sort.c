@@ -16,16 +16,3 @@ void bubble_sort(int *array, size_t size)
 				print_array(array, size);
 			}
 }
-
-/**
- * swap - function to swap two elements in an array
- * @a: first variable
- * @b: second variable
- * Return: none
-*/
-void swap(int *a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
