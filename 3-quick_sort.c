@@ -9,11 +9,11 @@
 */
 int partition(int *array, int low_index, int high_index, size_t size)
 {
-	int i, pivot_element, temp;
+	int i, j, pivot_element, temp;
 
 	pivot_element = array[high_index];
 	i = (low_index - 1);
-	for (int j = low_index; j < high_index; j++)
+	for (j = low_index; j < high_index; j++)
 	{
 		if (array[j] <= pivot_element)
 		{
